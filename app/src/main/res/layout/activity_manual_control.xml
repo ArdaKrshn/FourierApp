@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:orientation="horizontal"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:keepScreenOn="true"
+
+        tools:context="com.example.yagiz.fourierapp.ManualControlActivity"
+    >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/drive_background"
+            android:scaleType="centerCrop"
+            android:id="@+id/manualDriveBG"
+            />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_230sdp"
+        android:src="@drawable/back_button"
+        android:id="@+id/back_button"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pause_button"
+        android:id="@+id/startStop"
+        android:layout_marginTop="@dimen/_170sdp"
+        android:layout_marginStart="@dimen/_140sdp"
+        style="?android:attr/borderlessButtonStyle"
+
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fwd_button"
+        android:id="@+id/forward"
+        android:layout_marginStart="@dimen/_355sdp"
+        android:layout_marginTop="@dimen/_170sdp"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bwd_button"
+        android:id="@+id/backward"
+        android:layout_marginStart="@dimen/_355sdp"
+        android:layout_below="@+id/forward"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/left_button"
+        android:id="@+id/leftward"
+        android:layout_marginStart="@dimen/_305sdp"
+        android:layout_marginTop="@dimen/_200sdp"
+        style="?android:attr/borderlessButtonStyle"
+
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right_button"
+        android:id="@+id/rightward"
+        android:layout_marginStart="@dimen/_405sdp"
+        android:layout_marginTop="@dimen/_200sdp"
+        style="?android:attr/borderlessButtonStyle"
+
+        />
+     </RelativeLayout>

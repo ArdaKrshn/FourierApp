@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    tools:context="com.example.yagiz.fourierapp.MainActivity">
+
+    <ImageView
+        android:id="@+id/mainBG"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/_280sdp"
+        android:fontFamily="@font/raleway_blackitalic"
+        android:gravity="center_horizontal"
+        android:text="başlamak için tıklayın!"
+        android:textColor="#ff0000f0"
+        android:textSize="@dimen/_25sdp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fontFamily="@font/raleway_blackitalic"
+        android:gravity="center"
+        android:text="morfobot"
+        android:textColor="#ffff5400"
+        android:textSize="@dimen/_50sdp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/readUserInput"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToQR"
+            android:src="@drawable/qr_button" />
+
+        <ImageButton
+            android:id="@+id/lineFollow"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToLineFollowing"
+            android:paddingTop="@dimen/_20sdp"
+            android:src="@drawable/line_follow_button"
+            android:text="Otomatik Çizgi Takibi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/manualDrive"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToManualDrive"
+            android:src="@drawable/manual_button"
+            android:text="KENDİN SÜR" />
+
+        <ImageButton
+            android:id="@+id/bluetooth"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToBluetooth"
+            android:paddingTop="@dimen/_20sdp"
+            android:src="@drawable/aboutusbutton"
+            android:text="Bluetooth Bağlantısını Kur" />
+    </LinearLayout>
+</RelativeLayout>

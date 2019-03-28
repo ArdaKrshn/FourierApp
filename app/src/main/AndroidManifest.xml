@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.yagiz.fourierapp">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.bluetooth" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope"/>
+    <uses-feature android:name="android.hardware.screen.landscape"/>
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <service
+            android:name=".BluetoothManagerService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BLUETOOTH"></service>
+        
+
+        <activity android:name=".MainActivity" android:parentActivityName=".MainActivity"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DeviceListActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="sensorLandscape"
+            />
+        <activity
+            android:name=".MenuActivity"
+            android:parentActivityName=".DeviceListActivity"
+            android:screenOrientation="sensorLandscape"
+            />
+        <activity
+            android:name=".ManualControlActivity"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="sensorLandscape"
+            />
+        <activity
+            android:name=".QRReaderActivity"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="sensorLandscape"
+            />
+        <activity
+            android:name=".LineFollowingActivity"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="sensorLandscape"
+            />
+        <activity
+            android:name=".RoombaActivity"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="sensorLandscape"
+            />
+    </application>
+
+</manifest>
